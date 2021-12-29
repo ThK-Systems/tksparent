@@ -10,20 +10,20 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <slf4j.version>1.7.30</slf4j.version>
-        <logback.version>1.2.3</logback.version>
-        <bouncycastle.version>1.46</bouncycastle.version>
-        <junit.version>4.13</junit.version>
+        <slf4j.version>1.7.32</slf4j.version>
+        <logback.version>1.2.9</logback.version>
+        <bouncycastle.version>1.70</bouncycastle.version>
+        <junit.version>4.13.2</junit.version>
         <commons-collections4.version>4.4</commons-collections4.version>
-        <commons-lang3.version>3.11</commons-lang3.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-text.version>1.9</commons-text.version>
-        <commons-net.version>3.7.2</commons-net.version>
-        <commons-io.version>2.8.0</commons-io.version>
+        <commons-net.version>3.8.0</commons-net.version>
+        <commons-io.version>2.11.0</commons-io.version>
         <commons-codec.version>1.15</commons-codec.version>
-        <guava.version>30.0-jre</guava.version>
-        <reflections.version>0.9.12</reflections.version>
+        <guava.version>31.0-jre</guava.version>
+        <reflections.version>0.10.2</reflections.version>
         <jsch.version>0.1.55</jsch.version>
-        <icu4j.version>67.1</icu4j.version>
+        <icu4j.version>70.1</icu4j.version>
     </properties>
 
     <organization>
@@ -37,7 +37,7 @@
             <name>Thomas Kuhlmann</name>
             <email>thomas.kuhlmann@thk-systems.de</email>
             <organization>ThK-Systems</organization>
-            <organizationUrl>http://www.thk-systems.de</organizationUrl>
+            <organizationUrl>https://www.thk-systems.de</organizationUrl>
             <roles>
                 <role>lead</role>
                 <role>developer</role>
@@ -109,11 +109,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.3.1</version>
                 <configuration>
                     <doclint>none</doclint>
                     <bottom>
-                        <![CDATA[Created by <a href="http://oss.thk-systems.de">ThK-Systems<a>]]>
+                        <![CDATA[Created by <a href="https://www.thk-systems.de">ThK-Systems<a>]]>
                     </bottom>
                 </configuration>
                 <executions>
@@ -129,7 +129,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
+                <version>3.0.1</version>
+                <configuration>
+                    <gpgArguments>
+                        <arg>--no-tty</arg>
+                        <arg>--no-permission-warning</arg>
+                    </gpgArguments>
+                </configuration>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -140,6 +146,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
@@ -148,7 +155,7 @@
             <!-- COMMONS, UTILS -->
             <dependency>
                 <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk16</artifactId>
+                <artifactId>bcprov-jdk15on</artifactId>
                 <version>${bouncycastle.version}</version>
             </dependency>
             <dependency>
@@ -226,12 +233,12 @@
             <dependency>
                 <groupId>net.thk-systems.commons</groupId>
                 <artifactId>cumin</artifactId>
-                <version>4.2.0</version>
+                <version>4.2.1</version>
             </dependency>
             <dependency>
                 <groupId>net.thk-systems.network</groupId>
                 <artifactId>galangal</artifactId>
-                <version>1.4.0</version>
+                <version>1.4.1</version>
             </dependency>
 
             <!-- TEST -->
@@ -245,5 +252,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <version>1.21.0</version>
+    <version>1.22.0</version>
 </project>
