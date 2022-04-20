@@ -10,8 +10,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <slf4j.version>1.7.32</slf4j.version>
-        <logback.version>1.2.9</logback.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <logback.version>1.2.11</logback.version>
         <bouncycastle.version>1.70</bouncycastle.version>
         <junit.version>4.13.2</junit.version>
         <commons-collections4.version>4.4</commons-collections4.version>
@@ -20,10 +20,10 @@
         <commons-net.version>3.8.0</commons-net.version>
         <commons-io.version>2.11.0</commons-io.version>
         <commons-codec.version>1.15</commons-codec.version>
-        <guava.version>31.0-jre</guava.version>
+        <guava.version>31.1-jre</guava.version>
         <reflections.version>0.10.2</reflections.version>
         <jsch.version>0.1.55</jsch.version>
-        <icu4j.version>70.1</icu4j.version>
+        <icu4j.version>71.1</icu4j.version>
     </properties>
 
     <organization>
@@ -233,12 +233,12 @@
             <dependency>
                 <groupId>net.thk-systems.commons</groupId>
                 <artifactId>cumin</artifactId>
-                <version>4.2.1</version>
+                <version>4.2.2</version>
             </dependency>
             <dependency>
                 <groupId>net.thk-systems.network</groupId>
                 <artifactId>galangal</artifactId>
-                <version>1.4.1</version>
+                <version>1.4.2</version>
             </dependency>
 
             <!-- TEST -->
@@ -252,5 +252,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <version>1.22.0</version>
+    <version>1.23.0</version>
 </project>
