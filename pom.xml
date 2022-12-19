@@ -135,6 +135,7 @@
                         <arg>--no-tty</arg>
                         <arg>--no-permission-warning</arg>
                     </gpgArguments>
+                    <useAgent>false</useAgent>
                 </configuration>
                 <executions>
                     <execution>
